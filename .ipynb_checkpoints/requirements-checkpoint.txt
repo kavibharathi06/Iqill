@@ -1,0 +1,8 @@
+streamlit==1.40.1
+pdfplumber==0.10.3
+pandas==2.0.3
+nltk==3.9.1
+scikit-learn==1.3.2
+numpy==1.24.4
+cryptography
+

@@ -1,0 +1,148 @@
+skill,question,expected_answer
+
+python,What is Python?,General purpose interpreted programming language
+python,What are Python data types?,Integer float string list tuple dictionary set boolean
+python,Difference between list and tuple?,List mutable tuple immutable
+python,What is dictionary?,Key value pair data structure
+python,Explain OOP in Python?,Programming paradigm using classes and objects
+
+java,What is Java?,Object oriented platform independent programming language
+java,What is JVM?,Java Virtual Machine executes bytecode
+java,What is JDK?,Java Development Kit containing compiler and tools
+java,What is interface?,Blueprint containing abstract methods
+java,Difference between overloading and overriding?,Overloading same method different parameters overriding changes inherited behavior
+
+sql,What is SQL?,Structured Query Language used to manage databases
+sql,What is DBMS?,Software used to store and manage databases
+sql,What is JOIN?,Combine rows from multiple tables
+sql,What is normalization?,Process reducing redundancy
+sql,Difference between DELETE and DROP?,Delete removes rows drop removes entire table
+
+machine learning,What is machine learning?,Learning patterns from data to make predictions
+machine learning,What is supervised learning?,Learning using labeled examples
+machine learning,What is unsupervised learning?,Finding hidden patterns without labels
+machine learning,What is overfitting?,Model memorizes training data and generalizes poorly
+machine learning,What is gradient descent?,Optimization algorithm minimizing loss
+
+deep learning,What is deep learning?,Subset of machine learning using neural networks
+deep learning,What is neural network?,Layers of connected computational units
+deep learning,What is CNN?,Neural network specialized for images
+deep learning,What is RNN?,Neural network for sequential data
+deep learning,What is backpropagation?,Method for updating neural network weights
+
+html,What is HTML?,Markup language used to structure web pages
+html,What is semantic HTML?,Using meaningful tags that describe content
+html,Difference between div and span?,Div is block level span is inline
+html,What is form tag?,HTML element used to collect user input
+html,What is HTML5?,Latest version of HTML supporting multimedia and APIs
+
+css,What is CSS?,Language used to style web pages
+css,What is Flexbox?,One dimensional layout system for alignment
+css,What is Grid?,Two dimensional layout system
+css,What is media query?,Technique for responsive design
+css,What is box model?,Model containing content padding border and margin
+
+javascript,What is JavaScript?,Programming language used to create interactive websites
+javascript,What is closure?,Function remembering variables from outer scope
+javascript,What is promise?,Object representing asynchronous operation result
+javascript,What is async await?,Syntax simplifying asynchronous programming
+javascript,What is event loop?,Mechanism managing asynchronous execution
+
+react,What is React?,JavaScript library for building user interfaces
+react,What is JSX?,HTML like syntax written inside JavaScript
+react,What is Virtual DOM?,Lightweight copy of actual DOM
+react,What is useState?,React hook used to manage component state
+react,What is useEffect?,React hook used for side effects
+
+nodejs,What is NodeJS?,JavaScript runtime environment outside browser
+nodejs,What is npm?,Package manager for NodeJS
+nodejs,What is Express?,Framework for building backend applications
+nodejs,What is middleware?,Function executed between request and response
+nodejs,What is REST API?,Architecture for communication using HTTP
+
+
+django,What is Django?,Python web framework for rapid backend development
+django,What is MTV architecture?,Model Template View architecture used in Django
+django,What is Django ORM?,Object relational mapper to interact with databases
+django,What is migration?,Process of applying database schema changes
+django,What is Django REST Framework?,Toolkit for building REST APIs in Django
+
+flask,What is Flask?,Lightweight Python web framework
+flask,What is route?,URL mapped to a Python function
+flask,What is Jinja?,Template engine used in Flask
+flask,What is Blueprint?,Way to organize large Flask applications
+flask,Difference between Flask and Django?,Flask is lightweight Django is full featured
+
+tensorflow,What is TensorFlow?,Open source deep learning framework
+tensorflow,What is tensor?,Multi dimensional numerical data structure
+tensorflow,What is Keras?,High level API for building TensorFlow models
+tensorflow,What is CNN?,Neural network specialized for image processing
+tensorflow,What is backpropagation?,Algorithm for updating neural network weights
+
+pytorch,What is PyTorch?,Deep learning framework focused on flexibility
+pytorch,What is tensor?,Multi dimensional array structure
+pytorch,What is autograd?,Automatic differentiation engine
+pytorch,What is DataLoader?,Utility for loading batches of data
+pytorch,Difference between train and eval?,Train enables learning eval disables training behavior
+
+numpy,What is NumPy?,Python library for numerical computing
+numpy,What is ndarray?,Core multidimensional array structure
+numpy,What is broadcasting?,Applying operations across different shaped arrays
+numpy,What is vectorization?,Performing operations without explicit loops
+numpy,Why NumPy is faster?,Uses optimized C implementation and contiguous memory
+
+
+pandas,What is Pandas?,Python library used for data analysis and manipulation
+pandas,What is Series?,One dimensional labeled data structure
+pandas,What is DataFrame?,Two dimensional tabular data structure
+pandas,What is groupby?,Operation used to split and aggregate data
+pandas,Difference between merge and concat?,Merge combines columns concat combines rows or columns
+
+streamlit,What is Streamlit?,Python framework for building interactive web apps
+streamlit,What is st.write?,Function used to display content
+streamlit,What is st.file_uploader?,Widget used to upload files
+streamlit,What is session state?,Mechanism for storing values across interactions
+streamlit,Why use Streamlit?,Fast way to deploy data science applications
+
+power bi,What is Power BI?,Business intelligence tool for dashboards and reporting
+power bi,What is DAX?,Formula language used in Power BI
+power bi,What is Power Query?,Tool for transforming and cleaning data
+power bi,What is measure?,Calculated value created using DAX
+power bi,What is dashboard?,Visual interface showing insights
+
+tableau,What is Tableau?,Data visualization and analytics platform
+tableau,What is worksheet?,Single visualization sheet
+tableau,What is dashboard?,Collection of multiple visualizations
+tableau,What is calculated field?,Custom field created using formulas
+tableau,Difference between Tableau and Power BI?,Tableau focuses on visualization Power BI integrates strongly with Microsoft ecosystem
+
+nlp,What is NLP?,Field of enabling computers to understand human language
+nlp,What is tokenization?,Process of splitting text into words or units
+nlp,What is stopword removal?,Removing common words with low importance
+nlp,What is TF IDF?,Technique to measure importance of words
+nlp,What is BERT?,Transformer based language model for understanding text
+
+mysql,What is MySQL?,Relational database management system used to store structured data
+mysql,What is normalization?,Process of reducing redundancy in database tables
+mysql,What is primary key?,Unique identifier for each row in a table
+mysql,What is JOIN?,Operation used to combine rows from multiple tables
+mysql,Difference between DELETE and TRUNCATE?,Delete removes selected rows truncate removes all rows faster
+
+mongodb,What is MongoDB?,NoSQL document oriented database
+mongodb,What is collection?,Group of MongoDB documents
+mongodb,What is document?,JSON like structure used to store data
+mongodb,What is indexing?,Technique to improve query performance
+mongodb,Difference between SQL and MongoDB?,SQL stores tables MongoDB stores documents
+
+data science,What is Data Science?,Field of extracting insights from data using computation and statistics
+data science,What is EDA?,Exploratory Data Analysis for understanding datasets
+data science,Difference between AI ML and DL?,AI is broad ML learns from data DL uses neural networks
+data science,What is feature engineering?,Creating useful input variables for models
+data science,What is data preprocessing?,Cleaning and transforming raw data before analysis
+
+data analysis,What is Data Analysis?,Process of examining data to find useful insights
+data analysis,What is descriptive analytics?,Analyzing historical data for understanding patterns
+data analysis,What is KPI?,Key Performance Indicator measuring business success
+data analysis,What is correlation?,Relationship between variables
+data analysis,Difference between analysis and analytics?,Analysis studies data analytics uses methods for decision making
+
