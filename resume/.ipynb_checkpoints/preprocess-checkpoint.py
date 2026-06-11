@@ -1,12 +1,18 @@
 import nltk
 
+
 nltk.download(
-    "stopwords",
+    "punkt",
     quiet=True
 )
 
 nltk.download(
-    "punkt",
+    "punkt_tab",
+    quiet=True
+)
+
+nltk.download(
+    "stopwords",
     quiet=True
 )
 
@@ -33,9 +39,13 @@ def preprocess_text(text):
     for word in tokens:
 
         if (
+
             word.isalnum()
+
             and
+
             word not in stop_words
+
         ):
 
             cleaned.append(
