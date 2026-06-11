@@ -8,6 +8,7 @@ from evaluation.answer_evaluator import evaluate_answer
 
 
 st.title("InterQill")
+st.title("Interview Question Generator And Evaluation System")
 
 
 uploaded = st.file_uploader(
