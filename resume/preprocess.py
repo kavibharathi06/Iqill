@@ -1,26 +1,47 @@
 import nltk
 
+nltk.download(
+    "stopwords",
+    quiet=True
+)
+
+nltk.download(
+    "punkt",
+    quiet=True
+)
+
+
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 
-stop_words = set(stopwords.words("english"))
+stop_words = set(
+    stopwords.words(
+        "english"
+    )
+)
 
 
 def preprocess_text(text):
 
-    text = text.lower()
+    tokens = word_tokenize(
+        text.lower()
+    )
 
-    words = word_tokenize(text)
+    cleaned = []
 
-    filtered = []
+    for word in tokens:
 
-    for word in words:
+        if (
+            word.isalnum()
+            and
+            word not in stop_words
+        ):
 
-        if word.isalpha():
+            cleaned.append(
+                word
+            )
 
-            if word not in stop_words:
-
-                filtered.append(word)
-
-    return " ".join(filtered)
+    return " ".join(
+        cleaned
+    )
