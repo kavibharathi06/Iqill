@@ -1,19 +1,41 @@
 import pandas as pd
 
 
-skills = pd.read_csv("data/skills.csv")
+class SkillExtractor:
+    """
+    Extracts technical skills from the cleaned resume text
+    using Dictionary Matching.
+    """
+
+    def __init__(self, skills_path: str = "data/skills.csv"):
+
+        self.skills_df = pd.read_csv(skills_path)
+
+        self.skills = (
+            self.skills_df["skill"]
+            .dropna()
+            .str.lower()
+            .unique()
+            .tolist()
+        )
 
 
-def extract_skills(text):
+    def extract_skills(self, text: str):
 
-    text = text.lower()
+        text = text.lower()
 
-    matched = []
+        detected = []
 
-    for skill in skills["skill"]:
+        for skill in self.skills:
 
-        if skill in text:
+            if skill in text:
 
-            matched.append(skill)
+                detected.append(skill)
 
-    return matched
+        detected = sorted(
+            list(
+                set(detected)
+            )
+        )
+
+        return detected

@@ -1,57 +1,91 @@
+import re
 import nltk
 
-
-nltk.download(
-    "punkt",
-    quiet=True
-)
-
-nltk.download(
-    "punkt_tab",
-    quiet=True
-)
-
-nltk.download(
-    "stopwords",
-    quiet=True
-)
-
-
-from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
 
 
-stop_words = set(
-    stopwords.words(
-        "english"
-    )
-)
+def ensure_nltk_resources():
+    """
+    Download all required NLTK resources.
+    Safe to call multiple times.
+    """
+
+    resources = [
+        "punkt",
+        "punkt_tab",
+        "stopwords",
+        "averaged_perceptron_tagger",
+        "averaged_perceptron_tagger_eng"
+    ]
+
+    for resource in resources:
+        try:
+            nltk.download(resource, quiet=True)
+        except:
+            pass
 
 
-def preprocess_text(text):
+ensure_nltk_resources()
 
-    tokens = word_tokenize(
-        text.lower()
-    )
+STOP_WORDS = set(stopwords.words("english"))
+
+
+def preprocess_text(text: str) -> str:
+    """
+    Used while extracting resume skills.
+
+    Steps:
+    1 Lowercase
+    2 Tokenize
+    3 Remove punctuation
+    4 Remove stopwords
+    5 Join again
+    """
+
+    tokens = word_tokenize(text.lower())
 
     cleaned = []
 
     for word in tokens:
 
-        if (
+        if word.isalnum() and word not in STOP_WORDS:
 
-            word.isalnum()
+            cleaned.append(word)
 
-            and
+    return " ".join(cleaned)
 
-            word not in stop_words
 
-        ):
+def get_normalized_text(text: str) -> str:
+    """
+    Normalization used by TF-IDF.
 
-            cleaned.append(
-                word
-            )
+    This function is intentionally lightweight because
+    TF-IDF performs better when most meaningful words
+    are preserved.
 
-    return " ".join(
-        cleaned
-    )
+    Used by:
+
+    • Question Generator
+    • Answer Evaluator
+    """
+
+    text = text.lower()
+
+    text = re.sub(r"[^a-z0-9\s]", " ", text)
+
+    tokens = word_tokenize(text)
+
+    tokens = [
+
+        word
+
+        for word in tokens
+
+        if word not in STOP_WORDS
+
+        and len(word) > 1
+
+    ]
+
+    return " ".join(tokens)
